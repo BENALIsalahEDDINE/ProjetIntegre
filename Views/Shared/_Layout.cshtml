@@ -44,8 +44,7 @@
                         </li>
                     }
 
-                    @if (User.IsInRole(SD.SuperAdminUser) || User.IsInRole(SD.AdminUser) || User.IsInRole(SD.CustomerUser))
-                    {
+                    
                         @if (HttpContextAccessor.HttpContext.Session.GetInt32("ssCartCount") != null)
                         {
                             <li class="nav-item">
@@ -61,7 +60,7 @@
                                 <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Cart"><i class="fas fa-shopping-cart fa-lg"></i>&nbsp;items <b>(0)</b></a>
                             </li>
                         }
-                    }
+                    
 
 
                     <li class="nav-item">
